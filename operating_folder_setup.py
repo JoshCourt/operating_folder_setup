@@ -14,8 +14,8 @@ downloads_list.append("https://github.com/git-for-windows/git/releases/download/
 downloads_list.append("https://updates.torguard.biz/Software/Windows/torguard-setup-latest.exe")
 downloads_list.append("https://www.runescape.com/downloads/oldschool.msi")
 
-download_command = "curl \"https://www.python.org/ftp/python/3.8.3/python-3.8.3.exe\""
-subprocess.call(download_command, shell = True)
+
+#subprocess.call(download_command, shell = True)
 
 def download_from_url():
 	for _ in downloads_list:
@@ -45,3 +45,5 @@ def make_operating_folder():
 	print("Waiting for input to singal logged into git.....")
 	input()
 	subprocess.call(git_command_3, shell=True)
+
+#download_command = curl https://www.python.org/ftp/python/3.8.3/python-3.8.3.exe
