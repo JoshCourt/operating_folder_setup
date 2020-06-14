@@ -6,7 +6,10 @@ import requests
 
 
 
-
+python_dep_list = list()
+python_dep_list.append("pyautogui")
+python_dep_list.append("pyclick")
+python_dep_list.append("opencv-python")
 
 
 downloads_list = list()
@@ -46,4 +49,11 @@ def make_operating_folder():
 	input()
 	subprocess.call(git_command_3, shell=True)
 
+def python_install_dependencies():
+	for _ in python_dep_list:
+		command = "python -m pip install "+str(_)
+		subprocess.call(command, shell=True)
+
+python_install_dependencies()
+make_operating_folder()
 #download_command = curl https://www.python.org/ftp/python/3.8.3/python-3.8.3.exe
